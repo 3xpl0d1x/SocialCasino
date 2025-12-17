@@ -306,7 +306,7 @@ namespace CasinoGame.ProfileManager
 
             int totalGames = user.Wins + user.Losses + user.Draws;
 
-            double winRate = totalGames > 0 ? user.Wins / totalGames : 0;
+            double winRate = Convert.ToDouble(totalGames) > 0 ? Convert.ToDouble(user.Wins) / Convert.ToDouble(totalGames) : 0;
 
             Console.WriteLine("----------User Stats----------");
             Console.WriteLine($"Name: {user.Name}");
