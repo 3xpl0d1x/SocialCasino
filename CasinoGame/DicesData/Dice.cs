@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Casino.InGameExceptions;
+using CasinoGame.InGameExceptions;
 
-namespace Casino.DicesData
+namespace CasinoGame.DicesData
 {
     internal class Dice
     {

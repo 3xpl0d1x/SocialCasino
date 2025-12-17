@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "Password": "admin",
+      "balance": 1500,
+      "wins": 0,
+      "losses": 0,
+      "draws": 0
+    },
+    {
+      "id": 2,
+      "name": "guest",
+      "Password": "guest",
+      "balance": 1500,
+      "wins": 0,
+      "losses": 0,
+      "draws": 0
+    },
+    {
+      "id": 3,
+      "name": "fdf",
+      "Password": "12345",
+      "balance": 1500,
+      "wins": 0,
+      "losses": 0,
+      "draws": 0
+    },
+    {
+      "id": 4,
+      "name": "e",
+      "Password": "e",
+      "balance": 6659,
+      "wins": 4,
+      "losses": 0,
+      "draws": 0
+    }
+  ]
+}

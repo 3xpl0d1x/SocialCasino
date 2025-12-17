@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Casino.CardsData
+namespace CasinoGame.CardsData
 {
     internal class CardEnums
     {

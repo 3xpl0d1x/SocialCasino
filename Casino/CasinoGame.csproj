@@ -8,7 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="GameMechanics\" />
+    <Compile Include="C:\c_sharp\Casino\CasinoGame\Core\Casino.cs" Link="Casino.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="DataFolder\" />
   </ItemGroup>
 
 </Project>

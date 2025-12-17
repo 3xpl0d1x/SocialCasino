@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Casino.GameMechanics
+namespace CasinoGame.GameMechanics
 {
     internal abstract class CasinoGameBase
     {
@@ -12,28 +12,23 @@ namespace Casino.GameMechanics
 
         public delegate void GameResult();
         public event GameResult? OnWin;
-        public event GameResult? OnLoose;
+        public event GameResult? OnLosse;
         public event GameResult? OnDraw;
 
-        protected void OnWinInvoke() 
+        protected void OnWinInvoke()
         {
             OnWin?.Invoke();
         }
-        protected void OnLooseInvoke() 
+        protected void OnLosseInvoke()
         {
-            OnLoose?.Invoke();
+            OnLosse?.Invoke();
         }
-        protected void OnDrawInvoke() 
+        protected void OnDrawInvoke()
         {
             OnDraw?.Invoke();
         }
 
         protected abstract void FactoryMethod();
-
-        public CasinoGameBase() 
-        {
-            FactoryMethod();
-        }
 
     }
 }
