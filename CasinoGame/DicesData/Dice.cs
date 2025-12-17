@@ -9,7 +9,8 @@ namespace CasinoGame.DicesData
 {
     internal class Dice
     {
-
+        private int _minT;
+        private int _maxT;
         public int Number
         {
             get
@@ -21,7 +22,7 @@ namespace CasinoGame.DicesData
 
         private int _min
         {
-            get { return _min; }
+            get { return _minT; }
             set
             {
                 if (value < 1 || value > int.MaxValue)
@@ -35,7 +36,7 @@ namespace CasinoGame.DicesData
         }
         private int _max
         {
-            get { return _max; }
+            get { return _maxT; }
             set
             {
                 if (value < 1 || value > int.MaxValue)
@@ -53,6 +54,8 @@ namespace CasinoGame.DicesData
         {
             try
             {
+                _minT = min;
+                _maxT = max;
                 _min = min;
                 _max = max;
             }

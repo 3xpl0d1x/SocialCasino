@@ -13,8 +13,8 @@ namespace CasinoGame.GameMechanics
         private int _minimumValue;
         private int _maximumValue;
 
-        private int _playerScore;
-        private int _dealerScore;
+        private long _playerScore;
+        private long _dealerScore;
 
         private List<Dice> _dices;
         public DiceGame(int n, int minimum, int maximum) 
@@ -28,19 +28,35 @@ namespace CasinoGame.GameMechanics
 
         public override void PlayGame()
         {
+            Console.Clear();
             Console.WriteLine("Your turn!");
+            Console.WriteLine("Press 'Enter' button to continue");
+            while (Console.ReadKey().Key != ConsoleKey.Enter) ;
+            Console.Clear();
             foreach (var dice in _dices) 
             {
-                _playerScore += dice.Number;
+                long n = dice.Number;
+                _playerScore += n;
+                Console.WriteLine($"+{n}");
             }
             Console.WriteLine($"Your score: {_playerScore}");
+            Console.WriteLine("Press 'Enter' button to continue");
+            while (Console.ReadKey().Key != ConsoleKey.Enter) ;
+            Console.Clear();
 
             Console.WriteLine("Dealer's turn!");
+            Console.WriteLine("Press 'Enter' button to continue");
+            while (Console.ReadKey().Key != ConsoleKey.Enter) ;
             foreach (var dice in _dices)
             {
-                _dealerScore += dice.Number;
+                long n = dice.Number;
+                _dealerScore += n;
+                Console.WriteLine($"+{n}");
             }
-            Console.WriteLine($"DEaler's score: {_dealerScore}");
+            Console.WriteLine($"Dealer's score: {_dealerScore}");
+            Console.WriteLine("Press 'Enter' button to continue");
+            while (Console.ReadKey().Key != ConsoleKey.Enter) ;
+            Console.Clear();
 
             if (_playerScore > _dealerScore) { OnWinInvoke(); }
             else if (_playerScore < _dealerScore) { OnLosseInvoke(); }
